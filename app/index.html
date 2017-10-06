@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Layout and AngularJS SoftSwiss</title>
+
+        <!-- build:css css/vendor.min.css -->
+        <!-- endbuild -->
+
+        <!-- build:css css/main.min.css -->
+        <link rel="stylesheet" href="css/main.css">
+        <!-- endbuild -->
+    </head>
+<body ng-app="app">
+
+<div id="wrapper">
+    <header ui-view="header"></header>
+    <div id="content" class="wrapper-block">
+        <div class="container-fluid">
+            <div ui-view="main"></div>
+        </div>
+    </div>
+    <footer ui-view="footer"></footer>
+</div>
+
+<!-- build:js scripts/vendor.min.js -->
+<script src="libs/jquery/dist/jquery.js"></script>
+<script src="libs/angular/angular.js"></script>
+<script src="libs/ui-router/release/angular-ui-router.min.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/app.min.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/shared/config/router-config.js"></script>
+<script src="scripts/components/header/header-controller.js"></script>
+<script src="scripts/components/footer/footer-controller.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>
