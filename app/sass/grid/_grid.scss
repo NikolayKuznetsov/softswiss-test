@@ -1,0 +1,56 @@
+@import "../variables/variables";
+@import "../mixins/mixins";
+
+$smallValue: 4px;
+$middleValue: 8px;
+$defaultValue: 15px;
+
+$columns: 18;
+
+.row {
+  margin-right: -$defaultValue;
+  margin-left: -$defaultValue;
+  @for $i from 1 through $columns {
+    .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
+      padding-right: $defaultValue;
+      padding-left: $defaultValue;
+    }
+  }
+  @for $i from 1 through $columns {
+    .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
+      width:  ($i / $columns) * 100%;
+    }
+  }
+  &.middle {
+    margin-right: -$middleValue;
+    margin-left: -$middleValue;
+    @for $i from 1 through $columns {
+      .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
+        padding-right: $middleValue;
+        padding-left: $middleValue;
+      }
+    }
+  }
+  &.small {
+    margin-right: -$smallValue;
+    margin-left: -$smallValue;
+    .form-group {
+      margin-bottom: $smallValue * 2;
+    }
+    @for $i from 1 through $columns {
+      .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
+        padding-right: $smallValue;
+        padding-left: $smallValue;
+      }
+    }
+  }
+}
+
+/// Width
+@for $i from 1 through 20 {
+  .w-#{$i*5} {
+    width: #{$i*5%} !important;
+
+  }
+}
+

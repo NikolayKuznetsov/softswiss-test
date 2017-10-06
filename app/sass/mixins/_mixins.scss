@@ -1,0 +1,227 @@
+
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -khtml-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+
+/// Border Radius
+/// @param {Size} $radius [5px] - Radius
+/// @require {mixin} css3-prefix
+
+@mixin border-radius($radius: 5px) {
+    @include css-prefix('border-radius', $radius);
+}
+
+/// Box Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [5px] - Blur
+/// @param {Color} $color [rgba(0, 0, 0, .4)] - Color
+/// @param {Boolean} $inset - Inset
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0, 0, 0, .4), $inset: "") {
+    @if ($inset != "") {
+        @include css-prefix('box-shadow', $inset $x $y $blur $color);
+    } @else {
+        @include css-prefix('box-shadow', $x $y $blur $color);
+    }
+}
+
+@mixin box-shadow-none() {
+    @include css-prefix('box-shadow', 'none');
+}
+
+@mixin box-shadow-none-important() {
+    @include css-prefix('box-shadow', 'none !important');
+}
+/// Text Shadow
+/// @param {Size} $x [2px] - X
+/// @param {Size} $y [2px] - Y
+/// @param {Size} $blur [2px] - Blur
+/// @param {Color} $color [rgba(0, 0, 0, .4)] - Color
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0 ,0, 0, .4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+/// User-select
+/// @param {str} $params - Params [auto | none | text]
+/// @require {mixin} css3-prefix
+
+@mixin user-select($params) {
+    @include css-prefix('user-select', $params);
+}
+
+
+/// Transform
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+
+@mixin transform($params) {
+    @include css-prefix('transform', $params);
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+/// @require {mixin} css3-prefix
+
+@mixin transition($properties) {
+    @include css-prefix('transition', $properties);
+}
+
+/// Retina
+/// @param {Url} $file-1x - url normal image
+/// @param {Url} $file-2x - url retina image
+/// @param {Size} $width - width image
+/// @param {Size} $height - height image
+
+@mixin retina-image($file-1x, $file-2x, $width, $height, $important: "") {
+
+    @if ($important == "") {
+        background-image: url($file-1x);
+        background-repeat: no-repeat;
+        display: block;
+        width: $width;
+        height: $height;
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            background-image: url($file-2x);
+            background-size: $width $height;
+            background-repeat: no-repeat;
+        }
+    } @else {
+        background-image: url($file-1x) !important;
+        background-repeat: no-repeat !important;
+        display: block;
+        width: $width !important;
+        height: $height !important;
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+            background-image: url($file-2x) !important;
+            background-size: $width $height !important;
+            background-repeat: no-repeat !important;
+        }
+    }
+}
+
+/// Retina Picture
+/// @param {Url} $file - url normal image
+/// @param {Size} $width - width image
+/// @param {Size} $height - height image
+
+@mixin retina-picture($file, $width, $height) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        background-image: url($file);
+        background-size: $width $height;
+        background-repeat: no-repeat;
+    }
+}
+
+/// Retina Picture important
+/// @param {Url} $file - url normal image
+/// @param {Size} $width - width image
+/// @param {Size} $height - height image
+
+@mixin retina-picture-important($file, $width, $height) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        background-image: url($file) !important;
+        background-size: $width $height !important;
+        background-repeat: no-repeat;
+    }
+}
+
+/// Absolute Center
+
+@mixin absolute-center() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/// Fixed Center
+
+@mixin fixed-center() {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/// Keyframes
+/// @param {String} $animation-name - Name animation
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+/// Animation
+/// @param {String} $str - Always specify the animation-duration property, otherwise the duration is 0, and will never be played.
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+
+/// backface-visibility-hidden
+@mixin backface-visibility-hidden-flicker() {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/// text ...
+@mixin text-dots() {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
