@@ -1,0 +1,12 @@
+{
+  "catalogLinkJson": [
+    {
+      "name": "file 1",
+      "url": "api/url1.json"
+    },
+    {
+      "name": "file 1",
+      "url": "api/url2.json"
+    }
+  ]
+}

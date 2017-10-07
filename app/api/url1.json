@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "title": "title1",
+    "size": 0,
+    "description": "0 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
+    "cost": 120,
+    "status": "open",
+    "type": "type"
+  },
+  {
+    "id": 1,
+    "title": "title1",
+    "size": 1,
+    "description": "1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
+    "cost": 120,
+    "status": "open",
+    "type": "type"
+  }
+]

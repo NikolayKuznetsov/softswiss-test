@@ -24,6 +24,7 @@
   }
 
   .card-product {
+    height: 256px;
     padding: 16px 12px;
     margin-top: $catalogIndentMiddle;
     margin-bottom: $catalogIndentMiddle;
@@ -44,7 +45,11 @@
   }
 
   .sub-footer {
+    font-size: 1.25em;
     height: 48px;
+    .icon-twitter {
+      margin-right: 12px;
+    }
   }
 
   .footer-layout {
@@ -53,6 +58,19 @@
 }
 
 @media (max-width: 992px) {
+
+  .header {
+    height: 70px;
+    padding: 20px 0 0;
+    &.scrolled {
+      height: 60px;
+      padding: 10px 0 0;
+    }
+  }
+
+  .filter__box, .catalog__box {
+    padding: $catalogIndentMiddle 0;
+  }
 
   .catalog__box {
     .item-product {
@@ -68,7 +86,6 @@
     &.menu__header {
       ul {
         li {
-          font-size: 1.5em;
           padding: 10px 12px;
           margin-right: 12px;
         }
@@ -110,4 +127,19 @@
     }
   }
 
+}
+
+
+@media (max-width: 480px) {
+
+  .menu {
+    &.menu__header {
+      ul {
+        li {
+          margin-right: 0;
+        }
+      }
+    }
+
+  }
 }
