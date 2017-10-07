@@ -11,6 +11,14 @@
   background-color: $colorBlack;
 }
 
+.bg-charcoal {
+  background-color: $colorCharcoal;
+}
+
+.bg-bossanova {
+  background-color: $colorBossanova;
+}
+
 /// Fill
 
 .fill-white {
@@ -21,6 +29,14 @@
   fill: $colorBlack;
 }
 
+.fill-charcoal {
+  fill: $colorCharcoal;
+}
+
+.fill-bossanova {
+  fill: $colorBossanova;
+}
+
 /// Color text
 .color-white {
   color: $colorWhite;
@@ -28,4 +44,12 @@
 
 .color-black {
   color: $colorBlack;
+}
+
+.color-charcoal {
+  color: $colorCharcoal;
+}
+
+.color-bossanova {
+  color: $colorBossanova;
 }

@@ -10,10 +10,13 @@ $columns: 18;
 .row {
   margin-right: -$defaultValue;
   margin-left: -$defaultValue;
+  float: left;
+  width: 100%;
   @for $i from 1 through $columns {
     .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
       padding-right: $defaultValue;
       padding-left: $defaultValue;
+      float: left;
     }
   }
   @for $i from 1 through $columns {

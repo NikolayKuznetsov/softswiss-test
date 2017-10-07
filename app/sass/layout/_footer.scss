@@ -1,2 +1,58 @@
 @import "../mixins/mixins";
 @import "../variables/variables";
+
+.footer {
+  color: $colorWhite;
+  a {
+    color: $colorWhite;
+  }
+}
+
+.sub-footer, .footer-layout {
+  width: 100%;
+  float: left;
+}
+
+.sub-footer {
+  height: 72px;
+  font-size: 1.333em;
+  padding: 12px 0;
+  .container__box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .icon-twitter {
+    margin-right: 20px;
+  }
+}
+
+.footer-layout {
+  padding: 106px 0 114px;
+  .left__box {
+    text-transform: uppercase;
+    .title {
+      font-size: 1.667em;
+      line-height: 100%;
+      margin-bottom: 18px;
+    }
+    .desc {
+      font-size: 0.8333em;
+      line-height: 200%;
+    }
+  }
+  .right__box {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    .menu {
+      margin-top: 45px;
+    }
+    .copyright {
+      font-size: 1.5em;
+      margin-top: 10px;
+      text-align: right;
+    }
+  }
+}

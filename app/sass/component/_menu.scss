@@ -28,4 +28,38 @@
       }
     }
   }
+  &.menu__footer {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        font-size: 1.167em;
+        text-transform: uppercase;
+        padding: 2px 4px;
+        position: relative;
+        a {
+          color: $colorWhite;
+        }
+        &:after {
+          content: '';
+          background-color: $colorPaleOyster;
+          width: 1px;
+          height: 12px;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+        &:last-child {
+          padding-right: 0;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
