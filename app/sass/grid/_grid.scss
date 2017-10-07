@@ -1,10 +1,7 @@
 @import "../variables/variables";
 @import "../mixins/mixins";
 
-$smallValue: 4px;
-$middleValue: 8px;
 $defaultValue: 15px;
-
 $columns: 18;
 
 .row {
@@ -18,37 +15,21 @@ $columns: 18;
     clear: both;
   }
   @for $i from 1 through $columns {
-    .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
+    .col-md-#{$i} {
       padding-right: $defaultValue;
       padding-left: $defaultValue;
       float: left;
     }
   }
   @for $i from 1 through $columns {
-    .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
-      width:  ($i / $columns) * 100%;
+    .col-md-#{$i} {
+      width: ($i / $columns) * 100%;
     }
   }
-  &.middle {
-    margin-right: -$middleValue;
-    margin-left: -$middleValue;
+  @media (max-width: 767px) {
     @for $i from 1 through $columns {
-      .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
-        padding-right: $middleValue;
-        padding-left: $middleValue;
-      }
-    }
-  }
-  &.small {
-    margin-right: -$smallValue;
-    margin-left: -$smallValue;
-    .form-group {
-      margin-bottom: $smallValue * 2;
-    }
-    @for $i from 1 through $columns {
-      .col-lg-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, .col-md-#{$i} {
-        padding-right: $smallValue;
-        padding-left: $smallValue;
+      .col-md-#{$i} {
+        width: 100%;
       }
     }
   }
