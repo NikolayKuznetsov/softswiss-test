@@ -49,3 +49,17 @@ $urlBgFirstBox: '../images/pictures/bg-home.jpg';
     }
   }
 }
+
+/// Filter BOX
+.filter__box {
+  padding: 46px 0;
+  width: 100%;
+  float: left;
+  .checkbox-group, .clear {
+    padding: 0 32px;
+  }
+  .clear {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

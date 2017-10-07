@@ -368,6 +368,22 @@ body {
     .first__box .arrow.fill-white:hover {
       fill: #AA9B77; }
 
+.filter__box {
+  padding: 46px 0;
+  width: 100%;
+  float: left; }
+  .filter__box .checkbox-group, .filter__box .clear {
+    padding: 0 32px; }
+  .filter__box .clear {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
 .footer {
   color: #FFFFFF; }
   .footer a {
@@ -441,6 +457,9 @@ body {
 
 .bg-bossanova {
   background-color: #535253; }
+
+.bg-alice-blue {
+  background-color: #F5F6F7; }
 
 .fill-white {
   fill: #FFFFFF; }
@@ -528,6 +547,120 @@ body {
       padding-right: 0; }
       .menu.menu__footer ul li:last-child:after {
         display: none; }
+
+.btn {
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  display: inline-block;
+  font-family: "Roboto", "Exo 2", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .btn.btn-default {
+    background-color: #AA9B77;
+    color: #FFFFFF;
+    height: 52px; }
+    .btn.btn-default:hover, .btn.btn-default:active {
+      background-color: #94886B; }
+
+.checkbox {
+  font-family: "Roboto", "Exo 2", sans-serif;
+  padding-left: 27px;
+  margin: 0; }
+  .checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 18px;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 24px;
+    min-height: 24px;
+    cursor: pointer; }
+    .checkbox label:before, .checkbox label:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      margin-left: -24px; }
+    .checkbox label:before {
+      width: 24px;
+      height: 24px;
+      left: 0;
+      top: 0;
+      border: 2px solid #CCCCCC;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+    .checkbox label:after {
+      width: 15px;
+      height: 12px;
+      left: 5px;
+      top: 6px; }
+    .checkbox label:after {
+      background: url("../images/icons/icon-checkbox--checked.svg") center no-repeat;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transform: scale(0.5);
+      -khtml-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+    .checkbox label:hover:before {
+      border-color: #AA9B77;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+  .checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden; }
+    .checkbox input[type="checkbox"]:checked + label:before {
+      border-color: #AA9B77;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+    .checkbox input[type="checkbox"]:checked + label:after {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: scale(1);
+      -khtml-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+    .checkbox input[type="checkbox"]:disabled + label {
+      opacity: 0.65; }
+    .checkbox input[type="checkbox"]:disabled + label::after {
+      cursor: not-allowed; }
+
+.checkbox-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+  .checkbox-group .checkbox {
+    margin-right: 40px; }
 
 .icon {
   background-repeat: no-repeat;

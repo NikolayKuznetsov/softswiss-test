@@ -67,7 +67,7 @@ a, a:hover, a:focus, a:active, button, button:hover, button:focus, button:active
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: transparent; }
 
-input, textarea, select, option, a, button {
+input, textarea, select, option, a, button, label {
   -webkit-appearance: none;
   -khtml-appearance: none;
   -moz-appearance: none;
@@ -80,7 +80,7 @@ input, textarea, select, option, a, button {
   -ms-outline: none;
   -o-outline: none;
   outline: none; }
-  input:focus, input:active, textarea:focus, textarea:active, select:focus, select:active, option:focus, option:active, a:focus, a:active, button:focus, button:active {
+  input:focus, input:active, textarea:focus, textarea:active, select:focus, select:active, option:focus, option:active, a:focus, a:active, button:focus, button:active, label:focus, label:active {
     -webkit-appearance: none;
     -khtml-appearance: none;
     -moz-appearance: none;

@@ -80,7 +80,7 @@ a, button, i {
   }
 }
 
-input, textarea, select, option, a, button {
+input, textarea, select, option, a, button, label {
   @include appearance('none');
   @include outline('none');
   &:focus, &:active {

@@ -1,0 +1,26 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+.btn {
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  display: inline-block;
+  font-family: $fontFamilyRoboto;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  @include border-radius(3px);
+  &.btn-default {
+    background-color: $colorTallow;
+    color: $colorWhite;
+    height: 52px;
+    &:hover, &:active {
+      background-color: $colorPaleOyster;
+    }
+  }
+}
