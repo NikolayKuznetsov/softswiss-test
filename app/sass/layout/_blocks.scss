@@ -1,0 +1,51 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+$urlBgFirstBox: '../images/pictures/bg-home.jpg';
+
+.container__box {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.svg-icons {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.first__box {
+  background: $colorNightRider url($urlBgFirstBox) no-repeat center;
+  @include background-cover();
+  width: 100%;
+  height: 100vh;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $colorWhite;
+  .title, .desc {
+    text-align: center;
+    line-height: 100%;
+    color: $colorWhite;
+  }
+  .title {
+    font-size: 5em;
+    margin-bottom: 20px;
+  }
+  .desc {
+    font-size: 1.667em;
+    margin-bottom: 5px;
+  }
+  .arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    margin: auto;
+    &.fill-white {
+      &:hover {
+        fill: $colorTallow;
+      }
+    }
+  }
+}

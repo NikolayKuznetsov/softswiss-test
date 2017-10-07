@@ -1,0 +1,31 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+///Menu
+.menu {
+  ul {
+    li {
+      text-transform: capitalize;
+      padding: 6px 12px;
+    }
+  }
+  &.menu__header {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        font-size: 1.5em;
+        padding: 10px 20px;
+        margin-right: 18px;
+        a {
+          color: $colorWhite;
+        }
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}

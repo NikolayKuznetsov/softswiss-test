@@ -1,11 +1,23 @@
 <div class="container__box">
     <div class="header__box">
-        <div class="logo"></div>
+        <div class="logo">
+            <a ui-sref="index">
+                <i class="icon icon-logo white"></i>
+            </a>
+        </div>
         <div class="menu menu__header">
             <ul class="list">
-                <li>Home</li>
-                <li>Products</li>
-                <li>icon-cart</li>
+                <li>
+                    <a ui-sref="index">home</a>
+                </li>
+                <li>
+                    <a ui-sref="index">Products</a>
+                </li>
+                <li>
+                    <svg class="icon-shopping-cart fill-white">
+                        <use xlink:href="#icon-shopping-cart"></use>
+                    </svg>
+                </li>
             </ul>
         </div>
     </div>

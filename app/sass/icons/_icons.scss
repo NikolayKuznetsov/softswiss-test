@@ -1,0 +1,36 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+///Icons
+.icon {
+  background-repeat: no-repeat;
+  display: block;
+  $urlIconArrowDownScroll: '../images/icons/icon-arrow-down--scroll.svg';
+  &.icon-arrow-down--scroll {
+    @include svg-icon($urlIconArrowDownScroll, 17px, 11px);
+  }
+  $urlIconArrowDownSelect: '../images/icons/icon-arrow-down--select.svg';
+  &.icon-arrow-down--select {
+    @include svg-icon($urlIconArrowDownSelect, 6px, 4px);
+  }
+  $urlIconLogoWhite: '../images/icons/icon-logo.svg';
+  &.icon-logo.white {
+    @include svg-icon($urlIconLogoWhite, 53px, 40px);
+  }
+}
+
+/// Icons size
+.icon-arrow-down {
+  width: 34px;
+  height: 22px;
+}
+
+.icon-arrow-down--select {
+  width: 12px;
+  height: 8px;
+}
+
+.icon-shopping-cart {
+  width: 24px;
+  height: 20px;
+}

@@ -29,7 +29,7 @@ gulp.task('server-run', function () {
                 enable: true,
                 path: 'app/index.html'
             },
-            open: true
+            open: false
         }));
 });
 

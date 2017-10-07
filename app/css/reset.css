@@ -93,3 +93,6 @@ input, textarea, select, option, a, button {
     -ms-outline: none;
     -o-outline: none;
     outline: none; }
+
+svg:hover {
+  cursor: pointer; }

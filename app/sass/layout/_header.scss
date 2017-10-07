@@ -1,2 +1,31 @@
 @import "../mixins/mixins";
 @import "../variables/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  padding: 40px 0 0;
+  @include transition('all .5s ease');
+  &.scrolled {
+    background-color: $colorBossanova;
+    padding: 20px 0 0;
+    height: 80px;
+    @include transition('all .5s ease');
+  }
+}
+
+.header__box {
+  .logo, .menu {
+    float: left;
+  }
+  .logo {
+    width: 53px;
+  }
+  .menu {
+    width: calc(100% - 53px);
+  }
+}

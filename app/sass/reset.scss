@@ -88,3 +88,9 @@ input, textarea, select, option, a, button {
     @include outline('none');
   }
 }
+
+svg {
+  &:hover {
+    cursor: pointer;
+  }
+}

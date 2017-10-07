@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>icon-arrow-down--select</title><g id="Слой_2" data-name="Слой 2"><g id="Third"><g id="First"><g id="fa-angle-down"><path class="cls-1" d="M5.94.41,5.64.07a.17.17,0,0,0-.28,0L3,2.77.64.07A.2.2,0,0,0,.5,0,.19.19,0,0,0,.36.07L.06.41A.25.25,0,0,0,0,.57.25.25,0,0,0,.06.73l2.8,3.2a.17.17,0,0,0,.28,0L5.94.73A.25.25,0,0,0,6,.57.25.25,0,0,0,5.94.41Z"/></g></g></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 4">
+    <defs>
+        <style>.cls-1{fill-rule:evenodd;}</style>
+    </defs>
+    <title>icon-arrow-down--select</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g id="Third">
+            <g id="First">
+                <g id="fa-angle-down">
+                    <path class="cls-1"
+                          d="M5.94.41,5.64.07a.17.17,0,0,0-.28,0L3,2.77.64.07A.2.2,0,0,0,.5,0,.19.19,0,0,0,.36.07L.06.41A.25.25,0,0,0,0,.57.25.25,0,0,0,.06.73l2.8,3.2a.17.17,0,0,0,.28,0L5.94.73A.25.25,0,0,0,6,.57.25.25,0,0,0,5.94.41Z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

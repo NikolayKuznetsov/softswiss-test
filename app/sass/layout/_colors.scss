@@ -1,0 +1,31 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+/// Background Color
+
+.bg-white {
+  background-color: $colorWhite;
+}
+
+.bg-black {
+  background-color: $colorBlack;
+}
+
+/// Fill
+
+.fill-white {
+  fill: $colorWhite;
+}
+
+.fill-black {
+  fill: $colorBlack;
+}
+
+/// Color text
+.color-white {
+  color: $colorWhite;
+}
+
+.color-black {
+  color: $colorBlack;
+}
