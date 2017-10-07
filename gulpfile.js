@@ -50,10 +50,10 @@ gulp.task('clean', function () {
 });
 
 // BUILD fonts
-gulp.task('build-fonts', function () {
-    return gulp.src('./app/libs/bootstrap/fonts/*.*')
-        .pipe(gulp.dest(config.path.buildFont));
-});
+// gulp.task('build-fonts', function () {
+//     return gulp.src('./app/libs/bootstrap/fonts/*.*')
+//         .pipe(gulp.dest(config.path.buildFont));
+// });
 
 //BUILD js and css
 gulp.task('build-app', function () {
@@ -65,7 +65,7 @@ gulp.task('build-app', function () {
 
 //BUILD
 gulp.task('build', ['clean'], function () {
-    gulp.start('build-fonts', 'build-app');
+    gulp.start('build-app');
 });
 
 

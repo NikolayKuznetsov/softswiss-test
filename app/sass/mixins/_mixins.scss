@@ -219,6 +219,16 @@
     backface-visibility: hidden;
 }
 
+/// appearance
+@mixin appearance($type) {
+    @include css-prefix('appearance', $type);
+}
+
+/// outline
+@mixin outline($type) {
+    @include css-prefix('outline', $type);
+}
+
 /// text ...
 @mixin text-dots() {
     white-space: nowrap;
