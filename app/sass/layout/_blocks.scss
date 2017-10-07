@@ -7,6 +7,7 @@ $urlBgFirstBox: '../images/pictures/bg-home.jpg';
   max-width: 1152px;
   margin: 0 auto;
 }
+
 .svg-icons {
   display: none;
   width: 0;
@@ -55,11 +56,82 @@ $urlBgFirstBox: '../images/pictures/bg-home.jpg';
   padding: 46px 0;
   width: 100%;
   float: left;
+  .row {
+    display: flex;
+    align-items: center;
+  }
   .checkbox-group, .clear {
     padding: 0 32px;
   }
   .clear {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+/// Catalog box
+.catalog__box {
+  padding: 48px 0;
+  width: 100%;
+  float: left;
+  .catalog__content {
+    padding: 0 $catalogIndent / 2;
+  }
+  .item-product {
+    padding-left: $catalogIndent;
+    padding-right: $catalogIndent;
+  }
+}
+
+/// Card Product
+.card-product {
+  background-color: $colorAliceBlue;
+  width: 100%;
+  height: 378px;
+  padding: 24px 18px;
+  margin-top: $catalogIndent;
+  margin-bottom: $catalogIndent;
+  border: 6px solid transparent;
+  &:hover {
+    border-color: $colorTallow;
+    @include border-radius(2px);
+  }
+  .card-product__header {
+    .size {
+      color: $colorCharcoal;
+      text-transform: uppercase;
+    }
+  }
+  .card-product__content {
+    height: calc(100% - #{$catalogIndent});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      padding: $catalogIndent / 2;
+    }
+  }
+  .card-product__footer {
+    .name, .price {
+      float: left;
+    }
+    .name {
+      width: calc(100% - 120px);
+      color: $colorTallow;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    .price {
+      width: 120px;
+      color: $colorCharcoal;
+      text-align: right;
+    }
+  }
+  .card-product__header, .card-product__footer {
+    height: $catalogIndent / 2;
+    font-size: 1.5em;
+    line-height: $catalogIndent / 2;
   }
 }
