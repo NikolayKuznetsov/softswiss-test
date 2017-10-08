@@ -1,0 +1,56 @@
+<div ng-controller="CatalogCtrl as catalog">
+    <div class="filter__box bg-alice-blue">
+        <div class="container__box">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="checkbox-group">
+                        <div class="checkbox">
+                            <input type="checkbox" name="typeMen" id="optionsCheckboxMen">
+                            <label for="optionsCheckboxMen" class="">men</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="typeMen" id="optionsCheckboxWomen">
+                            <label for="optionsCheckboxWomen" class="">Womem</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="typeMen" id="optionsCheckboxChildren">
+                            <label for="optionsCheckboxChildren" class="">childRobotoren</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="clear">
+                        <button class="btn btn-default">see all prodRobotoucts</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalog__box">
+        <div class="container__box">
+            <div class="catalog__content">
+                <div class="row">
+                    <div class="col-md-6 item-product" ng-repeat="item in catalog.entries">
+                        <div class="card-product">
+                            <div class="card-product__header">
+                                <div class="size">size</div>
+                            </div>
+                            <div class="card-product__content">
+                                <img ng-src="{{item.img}}" alt="product">
+                            </div>
+                            <div class="card-product__footer">
+                                <div class="name">
+                                    <span ng-bind="item.title"></span>
+                                </div>
+                                <div class="price">
+                                    <span ng-bind="item.price"></span>€
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
