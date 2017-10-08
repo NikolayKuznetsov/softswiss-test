@@ -47,7 +47,7 @@
                     <div class="col-md-6 item-product"
                          ng-repeat="item in catalog.entries | filter:catalog.floorFilter"
                          ng-if="item.visible"
-                         ng-click="catalog.addCard(item.id)">
+                         ng-click="catalog.addCard(item)">
                         <div class="card-product"
                              ng-class="{'active' : catalog.action[item.id]}">
                             <div class="card-product__header">

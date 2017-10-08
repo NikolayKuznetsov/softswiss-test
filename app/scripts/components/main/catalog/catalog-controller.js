@@ -47,9 +47,10 @@ function CatalogCtrl(CatalogService, CardService) {
     /*
     * Add
     * */
-    catalog.addCard = function(id) {
-        catalog.action[id] = catalog.action[id] ? false : true;
-        CardService.add(id);
+    catalog.addCard = function(item) {
+        catalog.action[item.id] = catalog.action[item.id] ? false : true;
+        return catalog.action[item.id] ? CardService.add(item): CardService.removeItem(item);
+        // CardService.add(item);
     };
 
 

@@ -138,3 +138,53 @@ $urlBgFirstBox: '../images/pictures/bg-home.jpg';
     line-height: $catalogIndent / 2;
   }
 }
+
+/// card-dropdown
+.container__dropdown {
+  position: relative;
+  .card-dropdown {
+    background-color: $colorWhite;
+    position: absolute;
+    border: 1px solid $colorTallow;
+    width: 240px;
+    right: 0;
+    top: 60px;
+    visibility: hidden;
+    opacity: 0;
+    .items {
+      max-height: 210px;
+      overflow: auto;
+      .item {
+        font-size: 15px;
+        padding: 6px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .title {
+          width: 70%;
+          @include text-dots();
+        }
+        .price {
+          width: 20%;
+          text-align: right;
+        }
+        .count {
+          width: 10%;
+          text-align: right;
+        }
+      }
+    }
+    .total {
+      font-size: 15px;
+      font-weight: bold;
+      text-align: right;
+      padding: 6px 12px;
+    }
+  }
+  &.open {
+    .card-dropdown {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

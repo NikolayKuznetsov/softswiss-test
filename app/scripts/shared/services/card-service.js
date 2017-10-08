@@ -1,35 +1,39 @@
 var CardService = function () {
-    // var card = this;
-    //
-    // card.empty = false;
-    //
-    // card.setStatus = function (value) {
-    //     console.log('setStatus', value);
-    //     card.empty = value;
-    // };
-    //
-    // card.getStatus = function () {
-    //     console.log('getStatus', card.empty);
-    //     return card.empty;
-    // };
-    //
-    // return card;
 
     var _list = [];
 
     return {
-        getList: function() {
+        getList: function () {
             return _list;
         },
 
-        add: function(item) {
-            _list.push(item);
+        add: function (item) {
+            var counter = false;
+            angular.forEach(_list, function (value, key) {
+                if (_list[key].id == item.id) {
+                    _list[key].cardCount++;
+                    counter = true;
+                }
+            });
+
+            if (!counter) {
+                item.cardCount = 1;
+                _list.push(item);
+            }
             return item + ' is added';
         },
 
-        remove: function(index) {
+        removeIndex: function (index) {
             var item = _list.splice(index, 1)[0];
             return item + ' has been deleted';
+        },
+
+        removeItem: function (item) {
+            angular.forEach(_list, function (value, key) {
+                if (_list[key].id == item.id) {
+                   _list.splice(key, 1)[0]
+                }
+            });
         }
     };
 };
