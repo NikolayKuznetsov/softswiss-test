@@ -367,13 +367,13 @@ body {
   .card-product .card-product__footer .name, .card-product .card-product__footer .price {
     float: left; }
   .card-product .card-product__footer .name {
-    width: -webkit-calc(100% - 120px);
-    width: calc(100% - 120px);
+    width: -webkit-calc(100% - 90px);
+    width: calc(100% - 90px);
     color: #AA9B77;
     text-align: left;
     text-transform: uppercase; }
   .card-product .card-product__footer .price {
-    width: 120px;
+    width: 90px;
     color: #424242;
     text-align: right; }
   .card-product .card-product__header, .card-product .card-product__footer {
