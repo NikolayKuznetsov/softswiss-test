@@ -93,8 +93,9 @@ $urlBgFirstBox: '../images/pictures/bg-home.jpg';
   margin-top: $catalogIndent;
   margin-bottom: $catalogIndent;
   border: 6px solid transparent;
-  &:hover {
+  &:hover, &.active {
     border-color: $colorTallow;
+    cursor: pointer;
     @include border-radius(2px);
   }
   .card-product__header {

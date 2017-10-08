@@ -337,8 +337,9 @@ body {
   margin-top: 32px;
   margin-bottom: 32px;
   border: 6px solid transparent; }
-  .card-product:hover {
+  .card-product:hover, .card-product.active {
     border-color: #AA9B77;
+    cursor: pointer;
     -webkit-border-radius: 2px;
     border-radius: 2px; }
   .card-product .card-product__header .size {
