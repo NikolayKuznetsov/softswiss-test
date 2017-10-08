@@ -1,12 +1,16 @@
 {
   "catalogLinkJson": [
     {
-      "name": "file 1",
+      "name": "file men catalog",
       "url": "api/url1.json"
     },
     {
-      "name": "file 1",
+      "name": "file women catalog",
       "url": "api/url2.json"
+    },
+    {
+      "name": "file child catalog",
+      "url": "api/url3.json"
     }
   ]
 }

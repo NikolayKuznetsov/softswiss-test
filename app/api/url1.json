@@ -7,8 +7,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 5.00,
     "visible": true,
-    "img": "images/pictures/product-item-1.png",
-    "type": "type"
+    "img": "images/pictures/product-item-1.png"
   },
   {
     "id": 1,
@@ -18,7 +17,36 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 30.00,
     "visible": true,
-    "img": "images/pictures/product-item-2.png",
-    "type": "type"
+    "img": "images/pictures/product-item-2.png"
+  },
+  {
+    "id": 2,
+    "title": "T-Shirt",
+    "size": 0,
+    "floor": "men",
+    "description": "12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
+    "price": 60.00,
+    "visible": true,
+    "img": "https://images.asos-media.com/products/asos-longline-muscle-t-shirt-with-souvenir-print/8256719-1-navy?$XL$"
+  },
+  {
+    "id": 3,
+    "title": "T-Shirt",
+    "size": 0,
+    "floor": "men",
+    "description": "12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
+    "price": 60.00,
+    "visible": true,
+    "img": "https://images.asos-media.com/products/abercrombie-fitch-slim-fit-t-shirt-with-logo-in-pink/8458402-1-pink?$XL$"
+  },
+  {
+    "id": 4,
+    "title": "T-Shirt",
+    "size": 0,
+    "floor": "men",
+    "description": "12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
+    "price": 60.00,
+    "visible": true,
+    "img": "https://images.asos-media.com/products/abercrombie-fitch-slim-fit-t-shirt-with-logo-in-pink/8458402-1-pink?$XL$"
   }
 ]
