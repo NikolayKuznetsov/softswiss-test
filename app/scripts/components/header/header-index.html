@@ -1,4 +1,4 @@
-<div class="container__box">
+<div class="container__box" ng-controller="HeaderCtrl as header">
     <div class="header__box">
         <div class="logo">
             <a ui-sref="index">
@@ -14,10 +14,12 @@
                     <a ui-sref="index">Products</a>
                 </li>
                 <li>
-                    <svg class="icon-shopping-cart fill-white">
+                    <svg class="icon-shopping-cart fill-white"
+                    ng-class="{'fill-tallow' : header.list.length > 0}">
                         <use xlink:href="#icon-shopping-cart"></use>
                     </svg>
                 </li>
+                <li>{{header.list | json}}</li>
             </ul>
         </div>
     </div>

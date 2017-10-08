@@ -20,10 +20,6 @@
 
 <div ng-include="'scripts/components/icons/icons.html'"></div>
 
-<div ng-controller="PageCtrl as page">
-    {{ page.entries | json}}
-</div>
-
 <header class="header" ui-view="header" header-bar></header>
 <section class="main" ui-view="main"></section>
 <footer class="footer" ui-view="footer"></footer>
@@ -45,6 +41,7 @@
 <script src="scripts/components/page.controller.js"></script>
 
 <script src="scripts/shared/services/catalog-service.js"></script>
+<script src="scripts/shared/services/card-service.js"></script>
 
 <script src="scripts/shared/directives/state-class/state-class.js"></script>
 <script src="scripts/shared/directives/header-bar/header-bar.js"></script>

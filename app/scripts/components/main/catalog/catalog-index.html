@@ -5,22 +5,35 @@
                 <div class="col-md-9">
                     <div class="checkbox-group">
                         <div class="checkbox">
-                            <input type="checkbox" name="typeMen" id="optionsCheckboxMen">
-                            <label for="optionsCheckboxMen" class="">men</label>
+                            <input type="checkbox"
+                                   name="typeMen"
+                                   id="optionsCheckboxMen"
+                                   ng-model="catalog.checkbox.men"
+                                   ng-click="catalog.includeFloor('men')">
+                            <label for="optionsCheckboxMen">men</label>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" name="typeMen" id="optionsCheckboxWomen">
-                            <label for="optionsCheckboxWomen" class="">Womem</label>
+                            <input type="checkbox"
+                                   name="typeMen"
+                                   id="optionsCheckboxWomen"
+                                   ng-model="catalog.checkbox.women"
+                                   ng-click="catalog.includeFloor('women')">
+                            <label for="optionsCheckboxWomen">Womem</label>
                         </div>
                         <div class="checkbox">
-                            <input type="checkbox" name="typeMen" id="optionsCheckboxChildren">
-                            <label for="optionsCheckboxChildren" class="">childRobotoren</label>
+                            <input type="checkbox"
+                                   name="typeMen"
+                                   id="optionsCheckboxChildren"
+                                   ng-model="catalog.checkbox.child"
+                                   ng-click="catalog.includeFloor('child')">
+                            <label for="optionsCheckboxChildren">childRobotoren</label>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <div class="clear">
-                        <button class="btn btn-default">see all prodRobotoucts</button>
+                        <button class="btn btn-default" ng-click="catalog.clearFloorFilter()">see all prodRobotoucts
+                        </button>
                     </div>
                 </div>
             </div>
@@ -31,8 +44,12 @@
         <div class="container__box">
             <div class="catalog__content">
                 <div class="row">
-                    <div class="col-md-6 item-product" ng-repeat="item in catalog.entries">
-                        <div class="card-product">
+                    <div class="col-md-6 item-product"
+                         ng-repeat="item in catalog.entries | filter:catalog.floorFilter"
+                         ng-if="item.visible"
+                         ng-click="catalog.addCard(item.id)">
+                        <div class="card-product"
+                             ng-class="{'active' : catalog.action[item.id]}">
                             <div class="card-product__header">
                                 <div class="size">size</div>
                             </div>
