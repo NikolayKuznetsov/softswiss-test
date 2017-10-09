@@ -15,10 +15,13 @@
                 </li>
                 <li class="container__dropdown" ng-class="{'open' : header.showDropDown && header.list.length > 0}">
                     <svg class="icon-shopping-cart fill-white"
-                    ng-class="{'fill-tallow' : header.list.length > 0}"
+                    ng-class="{'fill-tallow' : header.list.length}"
                     ng-click="header.openDropDownCard()">
                         <use xlink:href="#icon-shopping-cart"></use>
                     </svg>
+                    <div class="count-product" ng-if="header.list.length">
+                        <span ng-bind="header.list.length"></span>
+                    </div>
                     <div class="card-dropdown">
                         <div class="items">
                             <div class="item" ng-repeat="item in header.list">
@@ -30,7 +33,7 @@
                             </div>
                         </div>
                         <div class="total">
-                            Total: <span ng-bind="header.totalCard()"></span>
+                            Total: <span ng-bind="header.totalCard()"></span>€
                         </div>
                     </div>
                 </li>

@@ -1,11 +1,11 @@
-<div class="first__box">
+<div class="first__box" ng-controller="PageCtrl as page">
     <div class="container__box">
         <h2 class="title">Our clothing , your comfort</h2>
         <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
         <p class="desc">eiusmod tempor incididunt ut labore et dolore</p>
         <p class="desc">magna aliqua.</p>
 
-        <svg class="arrow icon-arrow-down fill-white">
+        <svg class="arrow icon-arrow-down fill-white" ng-click="page.scrollCatalog()">
             <use xlink:href="#icon-arrow-down--scroll"></use>
         </svg>
 

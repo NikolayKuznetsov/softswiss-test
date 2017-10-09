@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "jquery": "^3.2.1",
-    "bower-lodash": "^4.8.2"
+    "bower-lodash": "^4.8.2",
+    "angular-scroll": "^1.0.2"
   }
 }
