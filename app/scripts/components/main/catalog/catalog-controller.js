@@ -1,5 +1,8 @@
 function CatalogCtrl(CatalogService, CardService) {
     var catalog = this;
+    
+    catalog.FILE_JSON = 'api/main.json';
+
     catalog.entries = [];
     catalog.active = [];
     catalog.checkbox = {};
@@ -11,7 +14,7 @@ function CatalogCtrl(CatalogService, CardService) {
      * Function init controller
      * */
     catalog.initPageCtrl = function () {
-        catalog.entries = CatalogService.getCatalog('api/main.json');
+        catalog.entries = CatalogService.getCatalog(catalog.FILE_JSON);
     };
 
     /*
@@ -38,7 +41,7 @@ function CatalogCtrl(CatalogService, CardService) {
     };
 
     /*
-     * Filter floor
+     * Clear Filter floor
      * */
     catalog.clearFloorFilter = function () {
         catalog.floorIncludes = [];
@@ -46,7 +49,7 @@ function CatalogCtrl(CatalogService, CardService) {
     };
 
     /*
-     * Add
+     * Add product in the card
      * */
     catalog.addCard = function (item) {
         if (!catalog.showSelectSize[item.id]) {
