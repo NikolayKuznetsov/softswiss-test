@@ -7,7 +7,6 @@ var ConfigService = function () {
         return window.innerWidth < config.mobileSizeScreen;
     };
 
-
     return config;
 };
 

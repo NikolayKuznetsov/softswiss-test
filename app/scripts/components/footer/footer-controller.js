@@ -1,7 +1,6 @@
 var FooterCtrl = function () {
     var footer = this;
 
-
 };
 
 FooterCtrl.$inject = [];

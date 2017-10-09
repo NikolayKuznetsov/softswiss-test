@@ -7,6 +7,9 @@ function PageCtrl(ScrollService, ConfigService) {
         duration: 800
     };
 
+    /*
+    * Scrolling to the catalog
+    * */
     page.scrollCatalog = function () {
         ScrollService.scrollTo(page.scroll.block, page.scroll.offset, page.scroll.duration);
     };
