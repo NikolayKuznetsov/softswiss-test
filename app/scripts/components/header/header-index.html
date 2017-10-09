@@ -27,13 +27,13 @@
                             <div class="item" ng-repeat="item in header.list">
                                 <div class="title" ng-bind="item.title"></div>
                                 <div class="price">
-                                    <span ng-bind="item.price * item.cardCount"></span>€
+                                    <span ng-bind="item.price * item.cardCount | number:2"></span>&euro;
                                 </div>
                                 <div class="count" ng-bind="item.cardCount"></div>
                             </div>
                         </div>
                         <div class="total">
-                            Total: <span ng-bind="header.totalCard()"></span>€
+                            Total: <span ng-bind="header.totalCard() | number:2"></span>&euro;
                         </div>
                     </div>
                 </li>
