@@ -1,6 +1,6 @@
 function CatalogCtrl(CatalogService, CardService) {
     var catalog = this;
-    
+
     catalog.FILE_JSON = 'api/main.json';
 
     catalog.entries = [];
