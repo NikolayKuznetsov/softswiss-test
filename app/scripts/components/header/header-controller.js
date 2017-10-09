@@ -23,11 +23,9 @@ var HeaderCtrl = function (CardService) {
      * */
     header.totalCard = function () {
         var total = 0;
-
         angular.forEach(header.list, function (value, key) {
             total += header.list[key].price * header.list[key].cardCount;
         });
-
         return total;
     };
 

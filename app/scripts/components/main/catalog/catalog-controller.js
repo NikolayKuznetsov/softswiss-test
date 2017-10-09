@@ -34,7 +34,6 @@ function CatalogCtrl(CatalogService, CardService) {
             if ($.inArray(catalogs.floor, catalog.floorIncludes) < 0)
                 return;
         }
-
         return catalogs;
     };
 

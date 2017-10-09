@@ -8,8 +8,8 @@ function PageCtrl(ScrollService, ConfigService) {
     };
 
     /*
-    * Scrolling to the catalog
-    * */
+     * Scrolling to the catalog
+     * */
     page.scrollCatalog = function () {
         ScrollService.scrollTo(page.scroll.block, page.scroll.offset, page.scroll.duration);
     };
