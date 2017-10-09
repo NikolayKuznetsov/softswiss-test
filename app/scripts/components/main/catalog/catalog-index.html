@@ -49,12 +49,31 @@
                          ng-if="item.visible"
                          ng-click="catalog.addCard(item)">
                         <div class="card-product"
-                             ng-class="{'active' : catalog.action[item.id]}">
+                             ng-class="{'active' : catalog.active[item.id]}">
                             <div class="card-product__header">
-                                <div class="size">size</div>
+                                <div class="size">
+                                    <div ng-bind="item.size" ng-if="item.size.length == 1"></div>
+                                    <div class="select-container"
+                                         ng-if="item.size.length > 1"
+                                         ng-class="{'open' : catalog.showSelectSize[item.id]}">
+                                        <div class="value"
+                                             ng-click="catalog.openSelectSize(item.id)"
+                                             stop-event>
+                                            <span ng-bind="catalog.selectedSizeValue[item.id] ? catalog.selectedSizeValue[item.id] : 'size'"></span>
+                                            <i class="icon icon-arrow-down--select"></i>
+                                        </div>
+                                        <div class="select">
+                                            <div class="option" ng-repeat="option in item.size">
+                                                <span ng-bind="option"
+                                                      ng-click="catalog.selectedSize(item.id, option)"
+                                                      stop-event></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-product__content">
-                                <img ng-src="{{item.img}}" alt="product">
+                                <img ng-src="{{item.img}}" alt="{{item.description}}">
                             </div>
                             <div class="card-product__footer">
                                 <div class="name">

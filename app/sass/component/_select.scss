@@ -1,0 +1,33 @@
+@import "../mixins/mixins";
+@import "../variables/variables";
+
+.select-container {
+  position: relative;
+  .value {
+    display: inline-block;
+    .icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .select {
+    background-color: $colorWhite;
+    position: absolute;
+    left: 0;
+    top: 21px;
+    width: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    @include box-shadow(1px, 1px, 3px, rgba(0, 0, 0, .25));
+    .option {
+      padding: 4px 6px;
+    }
+  }
+  &.open {
+    .select {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

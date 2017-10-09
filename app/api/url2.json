@@ -2,7 +2,7 @@
   {
     "id": 10,
     "title": "jeans",
-    "size": 0,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 60.00,
@@ -13,7 +13,7 @@
   {
     "id": 11,
     "title": "jeans",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -24,7 +24,7 @@
   {
     "id": 12,
     "title": "jeans",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -35,7 +35,7 @@
   {
     "id": 13,
     "title": "Dress with badges",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -46,7 +46,7 @@
   {
     "id": 14,
     "title": "Dress",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -68,7 +68,7 @@
   {
     "id": 16,
     "title": "Dress",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -79,7 +79,7 @@
   {
     "id": 17,
     "title": "sandals",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -90,7 +90,7 @@
   {
     "id": 18,
     "title": "ballet flats",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,
@@ -101,7 +101,7 @@
   {
     "id": 19,
     "title": "boot",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "women",
     "description": "11 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 120.00,

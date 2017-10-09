@@ -11,7 +11,7 @@
   }
   $urlIconArrowDownSelect: '../images/icons/icon-arrow-down--select.svg';
   &.icon-arrow-down--select {
-    @include svg-icon($urlIconArrowDownSelect, 6px, 4px);
+    @include svg-icon($urlIconArrowDownSelect, 12px, 8px);
   }
   $urlIconLogoWhite: '../images/icons/icon-logo.svg';
   &.icon-logo.white {

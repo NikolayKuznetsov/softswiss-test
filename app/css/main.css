@@ -737,6 +737,32 @@ body {
   .checkbox-group .checkbox {
     margin-right: 40px; }
 
+.select-container {
+  position: relative; }
+  .select-container .value {
+    display: inline-block; }
+    .select-container .value .icon {
+      display: inline-block;
+      vertical-align: middle; }
+  .select-container .select {
+    background-color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 21px;
+    width: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); }
+    .select-container .select .option {
+      padding: 4px 6px; }
+  .select-container.open .select {
+    visibility: visible;
+    opacity: 1; }
+
 .icon {
   background-repeat: no-repeat;
   display: block; }
@@ -747,9 +773,9 @@ body {
     height: 11px; }
   .icon.icon-arrow-down--select {
     background-image: url("../images/icons/icon-arrow-down--select.svg");
-    background-size: 6px 4px;
-    width: 6px;
-    height: 4px; }
+    background-size: 12px 8px;
+    width: 12px;
+    height: 8px; }
   .icon.icon-logo.white {
     background-image: url("../images/icons/icon-logo.svg");
     background-size: 53px 40px;

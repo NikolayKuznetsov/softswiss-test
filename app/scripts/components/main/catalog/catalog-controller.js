@@ -1,9 +1,11 @@
 function CatalogCtrl(CatalogService, CardService) {
     var catalog = this;
     catalog.entries = [];
-    catalog.action = [];
+    catalog.active = [];
     catalog.checkbox = {};
     catalog.floorIncludes = [];
+    catalog.showSelectSize = [];
+    catalog.selectedSizeValue = [];
 
     /*
      * Function init controller
@@ -15,7 +17,7 @@ function CatalogCtrl(CatalogService, CardService) {
     /*
      * Add floor
      * */
-    catalog.includeFloor = function(floor) {
+    catalog.includeFloor = function (floor) {
         var i = $.inArray(floor, catalog.floorIncludes);
         if (i > -1) {
             catalog.floorIncludes.splice(i, 1);
@@ -25,9 +27,9 @@ function CatalogCtrl(CatalogService, CardService) {
     };
 
     /*
-    * Filter floor
-    * */
-    catalog.floorFilter = function(catalogs) {
+     * Filter floor
+     * */
+    catalog.floorFilter = function (catalogs) {
         if (catalog.floorIncludes.length > 0) {
             if ($.inArray(catalogs.floor, catalog.floorIncludes) < 0)
                 return;
@@ -37,20 +39,36 @@ function CatalogCtrl(CatalogService, CardService) {
     };
 
     /*
-    * Filter floor
-    * */
-    catalog.clearFloorFilter = function() {
+     * Filter floor
+     * */
+    catalog.clearFloorFilter = function () {
         catalog.floorIncludes = [];
         catalog.checkbox = {};
     };
 
     /*
-    * Add
-    * */
-    catalog.addCard = function(item) {
-        catalog.action[item.id] = catalog.action[item.id] ? false : true;
-        return catalog.action[item.id] ? CardService.add(item): CardService.removeItem(item);
-        // CardService.add(item);
+     * Add
+     * */
+    catalog.addCard = function (item) {
+        if (!catalog.showSelectSize[item.id]) {
+            catalog.active[item.id] = catalog.active[item.id] ? false : true;
+            return catalog.active[item.id] ? CardService.add(item) : CardService.removeItem(item);
+        }
+    };
+
+    /*
+     * Open Select Size
+     * */
+    catalog.openSelectSize = function (id) {
+        catalog.showSelectSize[id] = catalog.showSelectSize[id] ? false : true;
+    };
+
+    /*
+     * Selected Size
+     * */
+    catalog.selectedSize = function (id, value) {
+        catalog.selectedSizeValue[id] = value;
+        catalog.openSelectSize(id);
     };
 
 

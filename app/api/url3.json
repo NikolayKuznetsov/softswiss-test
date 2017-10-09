@@ -2,7 +2,7 @@
   {
     "id": 110,
     "title": "nightwear",
-    "size": 0,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "12 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, vel.",
     "price": 7.20,
@@ -13,7 +13,7 @@
   {
     "id": 111,
     "title": "nightwear",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "bluezoo - Baby boys' blue elephant print pyjama set",
     "price": 17.50,
@@ -24,7 +24,7 @@
   {
     "id": 112,
     "title": "nightwear",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "Lands' End - Blue girls' snug fit graphic pyjama set",
     "price": 22.50,
@@ -35,7 +35,7 @@
   {
     "id": 113,
     "title": "nightwear",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "Lands' End - Red boys' flannel pyjama set",
     "price": 120.00,
@@ -46,7 +46,7 @@
   {
     "id": 114,
     "title": "t-shirts",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "bluezoo - Boys' white striped t-shirt",
     "price": 120.00,
@@ -57,7 +57,7 @@
   {
     "id": 115,
     "title": "t-shirts",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "bluezoo - Boys' grey 'Monster Squad' t-shirt",
     "price": 120.00,
@@ -68,7 +68,7 @@
   {
     "id": 116,
     "title": "t-shirts",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "bluezoo - Boys' red motorbike applique t-shirt",
     "price": 120.00,
@@ -79,7 +79,7 @@
   {
     "id": 117,
     "title": "Craghoppers",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "Craghoppers - Red 'Louisa' waterproof parka",
     "price": 120.00,
@@ -90,7 +90,7 @@
   {
     "id": 118,
     "title": "Regatta",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "Regatta - Blue 'Hollybank' parka jacket",
     "price": 120.00,
@@ -101,7 +101,7 @@
   {
     "id": 119,
     "title": "Regatta",
-    "size": 1,
+    "size": ["size 1", "size 2", "size 3"],
     "floor": "child",
     "description": "Regatta - Pink 'Splat' printed waterproof suit.",
     "price": 120.00,
